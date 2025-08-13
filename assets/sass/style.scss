@@ -3,8 +3,8 @@
 $global-font: "Manrope", sans-serif;
 $text-black: rgba(51, 51, 51, 1);
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -15,7 +15,7 @@ html{
 
 body {
   background-color: #f7f6ff;
-    transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 a {
@@ -41,6 +41,10 @@ a {
 .conatiner {
   max-width: 1200px;
   margin: 0px auto;
+  padding: 0px 16px;
+  @media (max-width: 900px) {
+    max-width: 900px;
+  }
 }
 
 .flex {
@@ -56,6 +60,11 @@ a {
   line-height: 126%;
   text-transform: uppercase;
   color: $text-black;
+  @media(max-width: 1024px){
+    &{
+        font-size: 25px;
+    }
+  }
 }
 
 .header {
@@ -97,14 +106,31 @@ a {
         linear-gradient(115.11deg, #f32c6d 10.12%, #cb1d95 100.01%)
       );
     }
+    &_menu{
+        display: none;
+    }
   }
-  @media(max-width: 1024px){
-    &{
-        &_navbar{
-            &_items{
-                display: none;
-            }
+  @media (max-width: 900px) {
+    & {
+      &_content {
+        &_logo {
+          img {
+            width: 200px;
+          }
         }
+        &_navbar {
+          display: none;
+        }
+        &_button {
+          display: none;
+        }
+        &_menu {
+            display: block;
+          i {
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }
@@ -150,15 +176,41 @@ a {
       }
     }
   }
-  @media(max-width: 1024px){
-    &{
-        &_content{
-            flex-direction: column;
-            padding: 0px 40px;
-            &_right{
-                margin-top: 30px;
+  @media (max-width: 1024px) {
+    & {
+      &_content {
+        flex-direction: column-reverse;
+        margin: 0px 30px;
+        width: 80%;
+        &_right {
+          h1{
+            font-size: 25px;
+            span{
+                font-size: 18px;
+            }
+          }
+          &_btns{
+            button:nth-child(1) {
+          @include btn(141px,44px, 250px, #77b2d3);
+          font-size: 14px;
+        }
+        button:nth-child(2) {
+          @include btn(85px, 44px, 250px, #77b2d3);
+          font-size: 14px;
+          margin: 0px 10px;
+        }
+        button:nth-child(3) {
+          @include btn(86px, 44px, 250px, #77b2d3);
+          font-size: 14px;
+        }
+          }
+        }
+        &_left{
+            img{
+                width: 100%;
             }
         }
+      }
     }
   }
 }
@@ -169,7 +221,6 @@ a {
   &_content {
     @extend .conatiner;
     border-radius: 20px;
-    height: 234px;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
     background: #fff;
     padding: 30px 40px;
@@ -203,13 +254,22 @@ a {
       }
     }
   }
-  @media(max-width: 1024px){
-    &{
-        &_content{
-            &_pointers{
-                flex-direction: column;
-            }
+  @media (max-width: 1024px) {
+    & {
+        margin-top: 20px;
+      &_content {
+        width: 300px;
+        margin-left: 20px;
+        &_pointers {
+          flex-direction: column;
+          &_pointer{
+            width: auto;
+             padding-right: 0;
+        margin-right: 0;
+        border: none;
+          }
         }
+      }
     }
   }
 }
@@ -294,13 +354,13 @@ a {
       }
     }
   }
-  @media(max-width: 1024px){
-    &{
-        &_content{
-            &_cards{
-                flex-direction: column;
-            }
+  @media (max-width: 1024px) {
+    & {
+      &_content {
+        &_cards {
+          flex-direction: column;
         }
+      }
     }
   }
 }
@@ -381,16 +441,16 @@ a {
       }
     }
   }
-  @media(max-width: 1024px){
-    &{
-        &_content{
-            flex-direction: column;
-            &_right{
-                img{
-                    width: 500px;
-                }
-            }
+  @media (max-width: 1024px) {
+    & {
+      &_content {
+        flex-direction: column;
+        &_right {
+          img {
+            width: 500px;
+          }
         }
+      }
     }
   }
 }
@@ -456,16 +516,17 @@ a {
       }
     }
   }
-  @media(max-width: 1024px){
-    &{
-        &_content{
-            flex-direction: column;
-            &_cards{
-                &_card{
-                    width: 470px;
-                }
-            }
+  @media (max-width: 1024px) {
+    & {
+      &_content {
+        &_cards {
+          display: flex;
+          flex-direction: column;
+          &_card {
+            width: 470px;
+          }
         }
+      }
     }
   }
 }
@@ -506,18 +567,19 @@ a {
         );
       }
     }
-    &_second, &_third{
-        gap: 20px;
-        p{
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        a{
-            color: $text-black
-        }
+    &_second,
+    &_third {
+      gap: 20px;
+      p {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      a {
+        color: $text-black;
+      }
     }
   }
-  &_bottom{
+  &_bottom {
     text-align: center;
     padding: 10px 0px;
     background-color: $text-black;
@@ -525,5 +587,10 @@ a {
     font-family: $global-font;
     color: #ffffff9d;
     font-size: 14px;
+  }
+  @media (max-width: 1024px) {
+    &_content {
+      flex-direction: column;
+    }
   }
 }
