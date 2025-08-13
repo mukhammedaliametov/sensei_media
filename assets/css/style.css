@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+html {
+  scroll-behavior: smooth; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f7f6ff;
+  transition: .5s ease; }
+
+a {
+  text-decoration: none; }
+
+.conatiner, .header_content, .hero_content, .about_content, .services_content, .contact, .work_content, .footer_content {
+  max-width: 1200px;
+  margin: 0px auto; }
+
+.flex, .header_content, .hero_content, .services_content_cards, .footer_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.section-title, .about_content h2, .services_content h2, .contact_content_left h2, .work_content h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 126%;
+  text-transform: uppercase;
+  color: #333333; }
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+  padding: 10px 0px;
+  background-color: #fff;
+  z-index: 999; }
+  .header_content_logo img {
+    width: 270px; }
+  .header_content_navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .header_content_navbar_items {
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      color: #333333;
+      font-weight: 500;
+      opacity: 0.8; }
+      .header_content_navbar_items:hover {
+        opacity: 1; }
+  .header_content_button {
+    width: 205px;
+    height: 54px;
+    opacity: 0.8;
+    border-radius: 9px;
+    border: none;
+    font-family: "Manrope", sans-serif;
+    color: #fff;
+    background: linear-gradient(115.11deg, #f32c6d 10.12%, #cb1d95 100.01%);
+    cursor: pointer;
+    font-size: 16px; }
+    .header_content_button:hover {
+      opacity: 1; }
+
+.hero {
+  padding-top: 60px; }
+  .hero_content {
+    gap: 20px; }
+    .hero_content_right {
+      font-family: "Manrope", sans-serif;
+      color: #333333; }
+      .hero_content_right h1 {
+        font-weight: 800;
+        font-size: 45px; }
+        .hero_content_right h1 span {
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 52px; }
+      .hero_content_right p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        margin-top: 10px; }
+      .hero_content_right_btns {
+        display: flex;
+        align-items: center;
+        margin-top: 20px; }
+        .hero_content_right_btns button:nth-child(1) {
+          width: 241px;
+          height: 54px;
+          opacity: 0.8;
+          border-radius: 250px;
+          border: none;
+          font-family: "Manrope", sans-serif;
+          color: #fff;
+          background: #77b2d3;
+          cursor: pointer;
+          font-size: 16px; }
+          .hero_content_right_btns button:nth-child(1):hover {
+            opacity: 1; }
+        .hero_content_right_btns button:nth-child(2) {
+          width: 114px;
+          height: 54px;
+          opacity: 0.8;
+          border-radius: 250px;
+          border: none;
+          font-family: "Manrope", sans-serif;
+          color: #fff;
+          background: #77b2d3;
+          cursor: pointer;
+          font-size: 16px;
+          margin: 0px 10px; }
+          .hero_content_right_btns button:nth-child(2):hover {
+            opacity: 1; }
+        .hero_content_right_btns button:nth-child(3) {
+          width: 141px;
+          height: 54px;
+          opacity: 0.8;
+          border-radius: 250px;
+          border: none;
+          font-family: "Manrope", sans-serif;
+          color: #fff;
+          background: #77b2d3;
+          cursor: pointer;
+          font-size: 16px; }
+          .hero_content_right_btns button:nth-child(3):hover {
+            opacity: 1; }
+
+.about {
+  margin-top: 80px;
+  padding: 50px 0px; }
+  .about_content {
+    border-radius: 20px;
+    height: 234px;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+    padding: 30px 40px; }
+    .about_content_pointers {
+      display: flex;
+      align-items: center;
+      font-family: "Manrope", sans-serif; }
+      .about_content_pointers_pointer {
+        margin-top: 35px;
+        border-right: 2px solid #c7c7c7;
+        padding-right: 55px;
+        margin-right: 55px; }
+        .about_content_pointers_pointer h3 {
+          font-weight: 800;
+          font-size: 40px;
+          line-height: 120%;
+          color: #f32c6d; }
+        .about_content_pointers_pointer p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          color: #333333; }
+      .about_content_pointers_pointer:nth-child(4) {
+        border: none; }
+
+.services {
+  margin-top: 30px; }
+  .services_content_cards {
+    gap: 20px;
+    padding: 30px 0px; }
+    .services_content_cards_card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; }
+      .services_content_cards_card_content {
+        position: relative;
+        border-radius: 15px;
+        width: 220px;
+        height: 378px;
+        box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+        background-color: #fff; }
+        .services_content_cards_card_content h3 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 15px 15px 0 0;
+          width: 220px;
+          height: 74px;
+          box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+          background: #77b2d3;
+          font-family: "Manrope", sans-serif;
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 144%;
+          text-transform: uppercase;
+          text-align: center;
+          color: #fff; }
+        .services_content_cards_card_content ul {
+          list-style: none;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px; }
+          .services_content_cards_card_content ul li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: "Manrope", sans-serif; }
+        .services_content_cards_card_content p {
+          position: absolute;
+          bottom: 0;
+          padding: 20px;
+          font-family: "Manrope", sans-serif;
+          font-weight: 800;
+          font-size: 30px;
+          color: #f32c6d;
+          border-top: 1px solid #e2e2e2;
+          padding-top: 10px; }
+          .services_content_cards_card_content p span {
+            font-weight: 400;
+            font-size: 16px;
+            color: #333333; }
+      .services_content_cards_card button {
+        width: 195px;
+        height: 54px;
+        opacity: 0.8;
+        border-radius: 9px;
+        border: none;
+        font-family: "Manrope", sans-serif;
+        color: #fff;
+        background: linear-gradient(122deg, #f32c6d 29.57%, #cb1d95 85.47%);
+        cursor: pointer;
+        font-size: 16px; }
+        .services_content_cards_card button:hover {
+          opacity: 1; }
+
+.contact {
+  margin-top: 50px; }
+  .contact_content {
+    display: flex;
+    justify-content: space-between; }
+    .contact_content_left p {
+      font-family: "Manrope", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 162%;
+      color: #333333;
+      margin: 20px 0px; }
+    .contact_content_left .contact_content_left_form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; }
+      .contact_content_left .contact_content_left_form_inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        gap: 15px; }
+        .contact_content_left .contact_content_left_form_inputs_input {
+          border-radius: 7px;
+          width: 270px;
+          height: 59px;
+          box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+          background: #fff;
+          border: none;
+          outline: none;
+          padding: 20px;
+          font-family: "Manrope", sans-serif; }
+      .contact_content_left .contact_content_left_form textarea {
+        border-radius: 7px;
+        height: 141px;
+        box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+        background: #fff;
+        border: none;
+        outline: none;
+        padding: 20px;
+        font-family: "Manrope", sans-serif; }
+      .contact_content_left .contact_content_left_form_checkbox {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px; }
+        .contact_content_left .contact_content_left_form_checkbox input[type="checkbox"] {
+          border-radius: 2px;
+          width: 22px;
+          height: 22px;
+          box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+          background: #fff; }
+        .contact_content_left .contact_content_left_form_checkbox label {
+          font-family: "Manrope", sans-serif;
+          margin-left: 8px; }
+      .contact_content_left .contact_content_left_form button {
+        width: 195px;
+        height: 54px;
+        opacity: 0.8;
+        border-radius: 9px;
+        border: none;
+        font-family: "Manrope", sans-serif;
+        color: #fff;
+        background: linear-gradient(122deg, #f32c6d 29.57%, #cb1d95 85.47%);
+        cursor: pointer;
+        font-size: 16px; }
+        .contact_content_left .contact_content_left_form button:hover {
+          opacity: 1; }
+
+.work {
+  margin-top: 80px; }
+  .work_content_cards {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0px; }
+    .work_content_cards_card {
+      border-radius: 15px;
+      width: 570px;
+      height: 500px;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
+      background: #fff;
+      font-family: "Manrope", sans-serif; }
+      .work_content_cards_card_first {
+        padding: 15px 30px; }
+        .work_content_cards_card_first p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 162%;
+          color: #333333; }
+      .work_content_cards_card_second {
+        width: 570px;
+        padding: 15px 30px;
+        height: 141px;
+        background: #f3f1fe; }
+        .work_content_cards_card_second h3 {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 144%;
+          text-transform: uppercase; }
+        .work_content_cards_card_second_items {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding-top: 10px; }
+      .work_content_cards_card_third {
+        padding: 15px 30px; }
+        .work_content_cards_card_third h3 {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 144%;
+          text-transform: uppercase;
+          margin-bottom: 10px; }
+
+.footer {
+  background: #fff; }
+  .footer_content {
+    padding: 30px 0px; }
+    .footer_content div {
+      display: flex;
+      flex-direction: column;
+      font-family: "Manrope", sans-serif;
+      color: #333333; }
+    .footer_content_first img {
+      width: 325px;
+      margin-left: -10px; }
+    .footer_content_first a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: #333333;
+      margin-top: 8px; }
+    .footer_content_first button {
+      margin-top: 20px;
+      width: 205px;
+      height: 54px;
+      opacity: 0.8;
+      border-radius: 9px;
+      border: none;
+      font-family: "Manrope", sans-serif;
+      color: #fff;
+      background: linear-gradient(122deg, #f32c6d 29.57%, #cb1d95 85.47%);
+      cursor: pointer;
+      font-size: 16px; }
+      .footer_content_first button:hover {
+        opacity: 1; }
+    .footer_content_second, .footer_content_third {
+      gap: 20px; }
+      .footer_content_second p, .footer_content_third p {
+        font-weight: bold;
+        text-transform: uppercase; }
+      .footer_content_second a, .footer_content_third a {
+        color: #333333; }
+  .footer_bottom {
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #333333;
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    color: #ffffff9d;
+    font-size: 14px; }
+
+/*# sourceMappingURL=style.css.map */
