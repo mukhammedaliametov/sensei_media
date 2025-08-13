@@ -98,6 +98,15 @@ a {
       );
     }
   }
+  @media(max-width: 1024px){
+    &{
+        &_navbar{
+            &_items{
+                display: none;
+            }
+        }
+    }
+  }
 }
 
 .hero {
@@ -141,6 +150,17 @@ a {
       }
     }
   }
+  @media(max-width: 1024px){
+    &{
+        &_content{
+            flex-direction: column;
+            padding: 0px 40px;
+            &_right{
+                margin-top: 30px;
+            }
+        }
+    }
+  }
 }
 
 .about {
@@ -181,6 +201,15 @@ a {
       &_pointer:nth-child(4) {
         border: none;
       }
+    }
+  }
+  @media(max-width: 1024px){
+    &{
+        &_content{
+            &_pointers{
+                flex-direction: column;
+            }
+        }
     }
   }
 }
@@ -265,6 +294,15 @@ a {
       }
     }
   }
+  @media(max-width: 1024px){
+    &{
+        &_content{
+            &_cards{
+                flex-direction: column;
+            }
+        }
+    }
+  }
 }
 
 .contact {
@@ -343,6 +381,18 @@ a {
       }
     }
   }
+  @media(max-width: 1024px){
+    &{
+        &_content{
+            flex-direction: column;
+            &_right{
+                img{
+                    width: 500px;
+                }
+            }
+        }
+    }
+  }
 }
 
 .work {
@@ -404,6 +454,18 @@ a {
           }
         }
       }
+    }
+  }
+  @media(max-width: 1024px){
+    &{
+        &_content{
+            flex-direction: column;
+            &_cards{
+                &_card{
+                    width: 470px;
+                }
+            }
+        }
     }
   }
 }
